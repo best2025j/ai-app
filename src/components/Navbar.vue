@@ -93,7 +93,7 @@ const goTo = (path: string) => {
           <div class="bg-black absolute -left-4.5 w-10 h-3 -rotate-45" />
 
           <span
-            class="uppercase text-sm font-[Share Tech Mono] bg-[#66E0F8] cursor-pointer py-2 w-32 text-center font-semibold"
+            class="uppercase text-sm text-black font-[Share Tech Mono] bg-[#66E0F8] cursor-pointer py-2 w-32 text-center font-semibold"
             >login</span
           >
           <div

@@ -4,8 +4,8 @@
   <div
     class="flex flex-col w-full font-[Share Tech Mono] items-start justify-center mx-auto h-full" 
   >
-    <div class="flex w-[80%] h-full">
-      <div class="w- pl-14">
+    <div class="flex w-[80%] relative top-28 mx-auto h-full">
+      <div class="pl-14">
         <h1 class="text-7xl font-medium leading-[120px] uppercase">About</h1>
 
         <div class="relative py-4 w-full hover:scale-105">

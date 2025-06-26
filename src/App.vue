@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SplitBackgroundLayout from "./layout/SplitBackgroundLayout.vue";
 import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import Navbar from "./components/Navbar.vue";
     <SplitBackgroundLayout>
       <router-view />
     </SplitBackgroundLayout>
+    <Footer />
   </div>
 </template>
 

@@ -13,7 +13,7 @@ const goTo = (path: string) => {
 </script>
 
 <template>
-  <div class="w-full bg-transparent">
+  <div class="w-full bg-gradient-to-r from-black via-black to-black z-20 relative top-0">
     <div
       class="flex w-[80%] mx-auto items-end justify-between shadow-black p-4"
     >

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="relative">
+  <div class="relative h-full">
     <div class="flex w-full">
       <div class="w-[30%]" />
       <div class="bg-svg-background w-[70%] flex items-center justify-center" />

@@ -8,7 +8,7 @@
           data-aos-delay="400"
           data-aos-duration="1000"
           data-aos="fade-right"
-          class="md:text-9xl text-3xl font-medium lg:leading-[120px] uppercase"
+          class="md:text-9xl text-3xl text-center md:text-start font-medium lg:leading-[120px] uppercase"
         >
           Choose your path
         </h1>

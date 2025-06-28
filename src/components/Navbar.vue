@@ -201,7 +201,7 @@ const navigateTo = (path: string): void => {
     <div v-if="isMenuOpen" class="fixed inset-0 z-50 h-full">
       <!-- Backdrop -->
       <div
-        class="absolute inset-0 bg-black/50 bg-opacity-50"
+        class="absolute inset-0 bg-black/50 bg-opacity-50 z-50"
         @click="isMenuOpen = false"
       ></div>
 

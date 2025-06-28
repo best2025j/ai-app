@@ -15,5 +15,5 @@
     "src/**/*.ts",
     "src/router/index.ts",
     "src/pages/auth/ChangePassword.vue"
-  ]
+, "src/particles.config.ts"  ]
 }

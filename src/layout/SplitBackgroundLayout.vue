@@ -5,29 +5,23 @@ import Footer from "../components/Footer.vue";
 
 <template>
   <div class="flex flex-col min-h-screen w-full overflow-hidden">
-    <!-- Navbar -->
+
     <Navbar />
 
-    <!-- Layout Main -->
     <div class="flex-1 flex flex-col lg:flex-row">
-      <!-- Left Empty Side (optional for design) -->
       <div class="hidden lg:block lg:w-[30%]"></div>
 
-      <!-- Right Background Area with Slot Content -->
       <div
         class="bg-svg-background w-full flex-1 lg:w-[70%] flex justify-center items-center p-4"
         data-aos="zoom-in"
         data-aos-delay="1000"
         data-aos-duration="1500"
-      >
-        <!-- 🔥 Your routed content appears here -->
-      </div>
+      ></div>
       <div class="w-full absolute inset-0">
         <slot />
       </div>
     </div>
 
-    <!-- Footer -->
     <Footer />
   </div>
 </template>

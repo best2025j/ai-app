@@ -15,15 +15,13 @@ const goTo = (path: string) => {
 };
 
 const isSoundOn = ref(true);
-const audio = new Audio("/sound.mp3"); // Replace with your sound file
-
 let bgMusic: HTMLAudioElement;
 
 onMounted(() => {
   bgMusic = new Audio("/sound.mp3");
   bgMusic.loop = true;
-  bgMusic.volume = 0.4; // Adjust volume (0.0 to 1.0)
-  // Attempt to play background music
+  bgMusic.volume = 0.4;
+
   bgMusic.play().catch((error) => {
     console.error("Autoplay was prevented:", error);
   });
@@ -33,15 +31,10 @@ const toggleSound = () => {
   isSoundOn.value = !isSoundOn.value;
 
   if (isSoundOn.value) {
-    audio.play().catch((error) => {
-      console.error("Error playing sound:", error);
-    });
     bgMusic.play().catch((error) => {
       console.error("Error playing background music:", error);
     });
   } else {
-    audio.pause();
-    audio.currentTime = 0;
     bgMusic.pause();
   }
 };

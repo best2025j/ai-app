@@ -22,7 +22,7 @@ import Footer from "../components/Footer.vue";
       >
         <!-- 🔥 Your routed content appears here -->
       </div>
-      <div class="w-full absolute inset-0">
+      <div class="w-full absolute animated-bg inset-0">
         <slot />
       </div>
     </div>
@@ -38,5 +38,29 @@ import Footer from "../components/Footer.vue";
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.animated-bg {
+  background: linear-gradient(
+    -45deg,
+    #0000ff99,
+    #ff00004d,
+    #00000066,
+    #ffffff33
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 </style>

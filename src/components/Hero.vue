@@ -2,6 +2,8 @@
 
 <template>
   <div class="flex h-full flex-col">
+    <div class="fixed top-0 left-0 bg-transparent w-full h-full -z-10"></div>
+
     <div div class="flex w-full h-screen items-center justify-center mx-auto">
       <div class="md:w-[650px] w-full font-[Share Tech Mono] p-4">
         <h1
@@ -41,7 +43,7 @@
             data-aos-delay="1000"
             data-aos-duration="2000"
             data-aos="fade-in"
-            class="md:w-52  rounded-2xl h-2 bg-white"
+            class="md:w-52 rounded-2xl h-2 bg-white"
           />
         </div>
       </div>

@@ -52,78 +52,84 @@ const starters = [
 
 <template>
   <div
-    class="w-full h-full font-[Share Tech Mono] flex flex-col items-center justify-center"
+    class="w-full md::max-w-7xl overflow-y-auto max-h-screen font-[Share Tech Mono] flex flex-col items-center px-4 py-20"
   >
-    <!-- Heading -->
-    <div class="w-[80%] mx-auto">
+    <!-- Section Heading -->
+    <div class="w-full max-w-7xl mx-auto mt-10">
       <h1
-        class="text-5xl md:text-7xl font-medium uppercase leading-tight"
+        data-aos="fade-in"
+        data-aos-delay="800"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+        class="text-4xl md:text-6xl lg:text-7xl font-medium uppercase leading-tight"
       >
         Pricing
       </h1>
     </div>
 
+    <!-- Pricing Cards Grid -->
     <div
-      class="w-[80%] pt-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+      class="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
     >
       <div
         v-for="(starter, index) in starters"
         :key="index"
-        class="relative w-full h-full overflow-hidden rounded-md shadow-lg group"
+        :data-aos="['fade-right', 'fade-down', 'fade-left'][index % 3]"
+        :data-aos-delay="['200', '500', '700'][index % 3]"
+        :data-aos-duration="['1000', '1500', '1000'][index % 3]"
+        class="relative w-full rounded-md shadow-lg overflow-hidden group"
       >
-        <!-- Background Image -->
+        <!-- Card Image -->
         <img
           :src="starter.image"
-          class="w-full h-full z-0"
           alt="Starter Pricing Image"
+          class="w-full h-full object-cover"
         />
 
         <!-- Overlay Content -->
         <div
-          class="absolute inset-0 z-10 flex flex-col h-full justify-between bg-black/40 text-white"
+          class="absolute inset-0 bg-black/40 text-white flex flex-col justify-between p-4 z-10"
         >
-          <!-- Top Right Button -->
-          <div class="flex justify-end ">
+          <!-- Top Button -->
+          <div class="flex justify-end">
             <button
-              class="uppercase bg-white text-black text-sm px-4 py-3 w-[162px] hover:scale-105 transition-transform"
+              class="uppercase bg-white text-black text-sm px-4 py-2 w-[140px] hover:scale-105 transition-transform"
             >
               {{ starter.title }}
             </button>
           </div>
 
-          <!-- Centered Content -->
-          <div
-            class="text-center space-y-4 w-[340px] justify-center flex flex-col items-center mx-auto"
-          >
-            <h2 class="text-xl font-semibold">
+          <!-- Center Content -->
+          <div class="text-center space-y-4 mx-auto w-full max-w-xs">
+            <h2 class="text-lg md:text-xl font-semibold">
               {{ starter.header }}
             </h2>
 
-            <div
-              class="bg-white/10 h-[400px] flex space-x-4 text-sm rounded-md p-4 shadow-md"
-            >
-              <!-- Feature List with Icon -->
+            <!-- Feature List -->
+            <div class="bg-white/10 rounded-md shadow-md p-4">
               <ul class="space-y-3">
                 <li
-                  v-for="(item, index) in starter.description"
-                  :key="index"
-                  class="flex items-center gap-2 text-white text-sm"
+                  v-for="(item, idx) in starter.description"
+                  :key="idx"
+                  class="flex items-center gap-3 text-sm"
                 >
-                  <img :src="starter.icon" alt="icon" class="w-8 h-8 mt-1" />
+                  <img :src="starter.icon" alt="icon" class="w-6 h-6" />
                   <span>{{ item }}</span>
                 </li>
               </ul>
             </div>
 
+            <!-- Pricing -->
             <p class="text-3xl font-bold">
-              ${{ starter.price }} <span class="text-xs font-normal">/ mo</span>
+              ${{ starter.price }}
+              <span class="text-xs font-normal">/ mo</span>
             </p>
           </div>
 
           <!-- Bottom Button -->
-          <div class="flex pl-44">
+          <div class="flex justify-center mt-6">
             <button
-              class="uppercase bg-white text-black text-sm px-4 py-3 w-[162px] hover:scale-105 transition-transform"
+              class="uppercase bg-white text-black text-sm px-4 py-2 w-[140px] hover:scale-105 transition-transform"
             >
               {{ starter.text }}
             </button>

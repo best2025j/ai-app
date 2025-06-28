@@ -1,12 +1,34 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Navbar from "../components/Navbar.vue";
+import Footer from "../components/Footer.vue";
+</script>
 
 <template>
-  <div class="relative h-full">
-    <div class="flex w-full">
-      <div class="w-[30%]" />
-      <div class="bg-svg-background w-[70%] flex items-center justify-center" />
+  <div class="flex flex-col min-h-screen w-full overflow-hidden">
+    <!-- Navbar -->
+    <Navbar />
+
+    <!-- Layout Main -->
+    <div class="flex-1 flex flex-col lg:flex-row">
+      <!-- Left Empty Side (optional for design) -->
+      <div class="hidden lg:block lg:w-[30%]"></div>
+
+      <!-- Right Background Area with Slot Content -->
+      <div
+        class="bg-svg-background w-full flex-1 lg:w-[70%] flex justify-center items-center p-4"
+        data-aos="zoom-in"
+        data-aos-delay="1000"
+        data-aos-duration="1500"
+      >
+        <!-- 🔥 Your routed content appears here -->
+      </div>
+      <div class="w-full absolute inset-0">
+        <slot />
+      </div>
     </div>
-    <div class="w-full absolute inset-0"><slot /></div>
+
+    <!-- Footer -->
+    <Footer />
   </div>
 </template>
 
@@ -16,6 +38,5 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
 }
 </style>

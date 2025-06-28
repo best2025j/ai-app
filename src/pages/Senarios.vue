@@ -26,11 +26,11 @@ const bottomCards = [
   },
 
   {
-    image: new URL("../assets/images/blanck.png", import.meta.url).href,
+    image: new URL("../assets/images/board.png", import.meta.url).href,
     text: "Cybersecurity Audit",
   },
   {
-    image: new URL("../assets/images/blancks.png", import.meta.url).href,
+    image: new URL("../assets/images/blanck.png", import.meta.url).href,
     text: "Phishing Simulation",
   },
   {
@@ -42,19 +42,29 @@ const bottomCards = [
 
 <template>
   <div
-    class="flex flex-col w-full font-[Share Tech Mono] items-start justify-center mx-auto h-full"
+    class="flex flex-col w-full font-[Share Tech Mono] items-start justify- mx-auto h-full"
   >
-    <div class="flex w-full relative top-10 mx-auto h-full">
-      <div class="flex flex-col w-[80%] relative mx-auto h-full">
-        <h1 class="text-7xl font-medium leading-[120px] uppercase">
+    <div class="flex w-full relative pt-22 mx-auto h-full">
+      <div class="flex flex-col md:w-[80%] overflow-hidden px-4 relative mx-auto h-full">
+        <h1
+          data-aos-delay="200"
+          data-aos-duration="1000"
+          data-aos="fade-right"
+          class="md:text-7xl font-medium md:leading-[120px] text-3xl uppercase"
+        >
           Scenarios
         </h1>
 
         <!-- CONTAINER THAT DOES NOT SCROLL THE BODY -->
 
-        <div class="w-full overflow-hidden">
+        <div
+          data-aos-delay="500"
+          data-aos-duration="2000"
+          data-aos="fade-left"
+          class="w-full overflow-hidden md:pl-40 pl-4"
+        >
           <div
-            class="flex overflow-x-auto no-scrollbar gap-4 py-4 px-4 md:px-0"
+            class="flex overflow-x-auto no-scrollbar gap-4 py-4"
           >
             <div
               v-for="(topCard, index) in topCards"
@@ -64,7 +74,7 @@ const bottomCards = [
               <div class="relative py-4 h-full w-full">
                 <img
                   :src="topCard.image"
-                  class="h-[300px] w-full object-cover"
+                  class="w-full h-auto"
                   alt="Card Image"
                 />
 
@@ -99,7 +109,7 @@ const bottomCards = [
 
                   <div class="pb-8">
                     <button
-                      class="text-start z-20 text-[15px] px-6 py-4 hover:scale-105 transition-transform text-white/80 border border-[#66E0F8]"
+                      class="text-start z-20 text-[15px] px-6 py-4 hover:scale-105 transition-transform rounded-full text-white/80 border border-[#66E0F8]"
                     >
                       {{ topCard.text }}
                     </button>
@@ -110,9 +120,14 @@ const bottomCards = [
           </div>
         </div>
 
-        <div class="w-full overflow-hidden pl-40">
+        <div
+          data-aos-delay="700"
+          data-aos-duration="1000"
+          data-aos="fade-right"
+          class="w-full overflow-hidden"
+        >
           <div
-            class="flex overflow-x-auto no-scrollbar gap-4 py-4 px-4 md:px-0"
+            class="flex overflow-x-auto no-scrollbar carousel-track gap-4 py-4 px-4 md:px-0"
           >
             <div
               v-for="(bottomCard, index) in bottomCards"
@@ -122,7 +137,7 @@ const bottomCards = [
               <div class="relative py-4 h-full w-full">
                 <img
                   :src="bottomCard.image"
-                  class="h-[300px] w-full object-cover"
+                  class="w-full h-auto"
                   alt="Card Image"
                 />
 
@@ -157,7 +172,7 @@ const bottomCards = [
 
                   <div class="pb-8">
                     <button
-                      class="text-start z-20 text-[15px] px-6 py-4 hover:scale-105 transition-transform text-white/80 border border-[#66E0F8]"
+                      class="text-start z-20 text-[15px] px-6 py-4 hover:scale-105 transition-transform rounded-full text-white/80 border border-[#66E0F8]"
                     >
                       {{ bottomCard.text }}
                     </button>
@@ -179,5 +194,20 @@ const bottomCards = [
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll-x 3s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 </style>

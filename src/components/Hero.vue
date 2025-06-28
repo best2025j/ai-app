@@ -1,37 +1,59 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div
-    class="flex flex-col w-full items-start justify-center mx-auto"
-  >
-    <div
-      class="flex w-full h-full items-start justify-center mx-auto"
-    >
-      <div class="w-[650px] font-[Share Tech Mono] pt-20 pl-14">
-        <h1 class="text-9xl font-medium leading-[120px] uppercase">
+  <div class="flex h-full flex-col">
+    <div div class="flex w-full h-screen items-center justify-center mx-auto">
+      <div class="md:w-[650px] w-full font-[Share Tech Mono] p-4">
+        <h1
+          data-aos-delay="400"
+          data-aos-duration="1000"
+          data-aos="fade-right"
+          class="md:text-9xl text-3xl font-medium lg:leading-[120px] uppercase"
+        >
           Choose your path
         </h1>
 
-        <button class="flex relative my-4 w-80">
-          <span
-            class="uppercase text-sm font-[Share Tech Mono] border border-[#66E0F8] cursor-pointer py-5 w-full text-center font-semibold"
-            >enter</span
+        <div class="flex relative my-4 md:w-80 w-full">
+          <button
+            data-aos-delay="700"
+            data-aos-duration="1000"
+            data-aos="zoom-in"
+            class="uppercase rounded-full text-sm font-[Share Tech Mono] border border-[#66E0F8] cursor-pointer py-5 w-full text-center font-semibold"
           >
+            enter
+          </button>
+        </div>
+
+        <div class="flex pt-40 space-x-2">
           <div
-            class="border-[#66E0F8] border-t bg-black absolute -bottom-[6px] -right-[8px] w-6 h-[17px] -rotate-42"
+            data-aos-delay="300"
+            data-aos-duration="1500"
+            data-aos="fade-in"
+            class="md:w-20 rounded-2xl h-2 bg-white/20"
           />
-        </button>
+          <div
+            data-aos-delay="650"
+            data-aos-duration="1500"
+            data-aos="fade-in"
+            class="md:w-20 rounded-2xl h-2 bg-white/20"
+          />
+          <div
+            data-aos-delay="1000"
+            data-aos-duration="2000"
+            data-aos="fade-in"
+            class="md:w-52  rounded-2xl h-2 bg-white"
+          />
+        </div>
       </div>
 
-      <div class="">
+      <div
+        data-aos-delay="700"
+        data-aos-duration="1000"
+        data-aos="fade-left"
+        class="md:block hidden"
+      >
         <img src="../assets/images/hud.png " alt="" />
       </div>
-    </div>
-
-    <div class="flex md:hidden space-x-2">
-      <div class="w-20 h-2 bg-white/20" />
-      <div class="w-20 h-2 bg-white/20" />
-      <div class="w-52 h-2 bg-white" />
     </div>
   </div>
 </template>

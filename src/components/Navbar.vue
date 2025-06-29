@@ -54,7 +54,7 @@ const navigateTo = (path: string): void => {
 
 <template>
   <div
-    class="w-full bg-transparent z-10 relative top-0"
+    class="w-full z-20 relative top-0"
   >
     <div
       class="flex w-full xl:w-[80%] mx-auto items-end justify-between shadow-black p-4"

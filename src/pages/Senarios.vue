@@ -45,7 +45,7 @@ const bottomCards = [
     class="flex flex-col w-full font-[Share Tech Mono] items-start justify- mx-auto h-full"
   >
     <div class="flex w-full relative pt-22 mx-auto h-full">
-      <div class="flex flex-col md:w-[80%] overflow-hidden px-4 relative mx-auto h-full">
+      <div class="flex flex-col z-10 md:w-[80%] overflow-hidden px-4 relative mx-auto h-full">
         <h1
           data-aos-delay="200"
           data-aos-duration="1000"

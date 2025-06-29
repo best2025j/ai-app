@@ -6,7 +6,7 @@
   >
     <!-- Content Wrapper -->
     <div
-      class="w-full max-w-7xl mx-auto h-full flex flex-col items-start justify-center top-20 relative space-y-4"
+      class="w-full max-w-7xl mx-auto h-full flex flex-col items-start z-10 justify-center top-20 relative space-y-4"
     >
       <!-- About Heading -->
       <h1

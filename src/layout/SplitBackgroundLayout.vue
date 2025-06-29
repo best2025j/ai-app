@@ -1,23 +1,24 @@
 <script setup lang="ts">
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
+import GradientBg from "../components/GradientBg.vue";
 </script>
 
 <template>
   <div class="flex flex-col min-h-screen w-full overflow-hidden">
-
     <Navbar />
 
     <div class="flex-1 flex flex-col lg:flex-row">
-      <div class="hidden lg:block lg:w-[30%]"></div>
+      <div class="hidden lg:block lg:w-[30%]" />
 
       <div
         class="bg-svg-background w-full flex-1 lg:w-[70%] flex justify-center items-center p-4"
         data-aos="zoom-in"
         data-aos-delay="1000"
         data-aos-duration="1500"
-      ></div>
+      />
       <div class="w-full absolute inset-0">
+        <GradientBg />
         <slot />
       </div>
     </div>

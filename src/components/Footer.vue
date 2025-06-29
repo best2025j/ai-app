@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="w-full bg-black h-full z-10 relative">
+  <div class="w-full h-full z-10  bg-transparent">
     <div
       class="flex md:flex-row md:w-[80%] mx-auto flex-col justify-between shadow-black p-4"
     >

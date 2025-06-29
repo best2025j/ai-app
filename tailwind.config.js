@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        monoTech: ['"Share Tech Mono"', "monospace"],
+      },
       animation: {
         blob: "blob 20s infinite ease-in-out",
       },

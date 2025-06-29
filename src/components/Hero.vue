@@ -3,7 +3,7 @@
 <template>
   <div class="flex h-full flex-col">
     <div div class="flex w-full h-screen items-center justify-center mx-auto">
-      <div class="md:w-[650px] w-full font-[Share Tech Mono] p-4">
+      <div class="md:w-[650px] w-full p-4">
         <h1
           data-aos-delay="400"
           data-aos-duration="1000"

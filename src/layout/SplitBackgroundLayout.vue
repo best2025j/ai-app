@@ -9,10 +9,10 @@ import GradientBg from "../components/GradientBg.vue";
     <Navbar />
 
     <div class="flex-1 flex flex-col lg:flex-row">
-      <div class="hidden lg:block lg:w-[30%]" />
+      <div class="hidden lg:block lg:w-[50%]" />
 
       <div
-        class="bg-svg-background w-full flex-1 lg:w-[70%] flex justify-center items-center p-4"
+        class="bg-svg-background w-full flex-1 lg:w-[50%] flex justify-center items-center "
         data-aos="zoom-in"
         data-aos-delay="1000"
         data-aos-duration="1500"
@@ -32,7 +32,7 @@ import GradientBg from "../components/GradientBg.vue";
   background-image: url("../assets/images/earth.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 /* .animated-bg {

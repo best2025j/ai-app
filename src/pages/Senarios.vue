@@ -109,7 +109,7 @@ const bottomCards = [
 
                   <div class="pb-8">
                     <button
-                      class="text-start z-20 text-[15px] px-6 py-4 hover:scale-105 transition-transform rounded-full text-white/80 border border-[#66E0F8]"
+                      class="text-start z-20 text-[15px] px-6 py-4 hover:scale-105 transition-transform rounded text-white/80 border border-[#66E0F8]"
                     >
                       {{ topCard.text }}
                     </button>
@@ -172,7 +172,7 @@ const bottomCards = [
 
                   <div class="pb-8">
                     <button
-                      class="text-start z-20 text-[15px] px-6 py-4 hover:scale-105 transition-transform rounded-full text-white/80 border border-[#66E0F8]"
+                      class="text-start z-20 text-[15px] px-6 py-4 hover:scale-105 transition-transform rounded text-white/80 border border-[#66E0F8]"
                     >
                       {{ bottomCard.text }}
                     </button>

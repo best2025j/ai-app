@@ -18,7 +18,7 @@
             data-aos-delay="700"
             data-aos-duration="1000"
             data-aos="zoom-in"
-            class="uppercase rounded-full text-sm font-[Share Tech Mono] border border-[#66E0F8] cursor-pointer py-5 w-full text-center font-semibold"
+            class="uppercase rounded text-sm font-[Share Tech Mono] border border-[#66E0F8] cursor-pointer py-5 w-full text-center font-semibold"
           >
             enter
           </button>

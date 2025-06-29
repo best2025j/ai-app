@@ -111,7 +111,7 @@ const starters = [
                 <li
                   v-for="(item, idx) in starter.description"
                   :key="idx"
-                  class="flex items-center gap-3 text-sm"
+                  class="flex items-center gap-3 text-xs"
                 >
                   <img :src="starter.icon" alt="icon" class="w-6 h-6" />
                   <span>{{ item }}</span>
